@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChavaleteWorld | Your word library</title>
+    <meta
+      name="description"
+      content="ChavaleteWords, the app where you build your own word library, plus language courses to learn Spanish or English."
+    />
+    <meta name="theme-color" content="#0F1115" />
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Lora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="#top" aria-label="ChavaleteWorld">
+          <img src="img/logo.svg" alt="" width="40" height="40" />
+          <span>Chavalete<b>World</b></span>
+        </a>
+        <div class="nav-right">
+          <nav class="nav-links" aria-label="Main">
+            <a href="#how" data-t="nav_how"></a>
+            <a href="#features" data-t="nav_features"></a>
+            <a href="#course" data-t="nav_course"></a>
+            <a href="#faq">FAQ</a>
+          </nav>
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="wrap">
+          <div>
+            <span class="kicker" data-t="hero_kicker"></span>
+            <h1 data-h="hero_title"></h1>
+            <p class="lead" data-t="hero_lead"></p>
+            <div class="actions">
+              <a class="btn btn-azul" href="#buy" data-t="hero_cta"></a>
+              <a class="btn btn-gris" href="#how" data-t="hero_cta2"></a>
+            </div>
+            <div class="hero-meta">
+              <span data-t="meta_play"></span>
+              <span data-t="meta_offline"></span>
+              <span data-t="meta_once"></span>
+            </div>
+          </div>
+
+          <div>
+            <div class="phone" role="group" data-aria="demo_aria">
+              <div class="app">
+                <div class="a-top">
+                  <h3 data-t="a_title"></h3>
+                  <span class="a-chip" aria-hidden="true" data-t="a_settings"></span>
+                </div>
+                <div class="a-row">
+                  <span class="a-where" id="p-where"></span>
+                  <button class="a-btn" id="p-change" type="button" data-t="a_change"></button>
+                </div>
+                <div class="a-row">
+                  <div class="a-time">
+                    <small data-t="a_time"></small>
+                    <button class="a-pm" id="p-minus" type="button" aria-label="−5 s">−</button>
+                    <strong id="p-secs">15 s</strong>
+                    <button class="a-pm" id="p-plus" type="button" aria-label="+5 s">+</button>
+                  </div>
+                  <button class="a-clock" id="p-clock" type="button"></button>
+                </div>
+                <div class="a-card">
+                  <p class="a-state" data-t="a_remember"></p>
+                  <p class="a-word" id="p-word"></p>
+                  <p class="a-pron" id="p-pron"></p>
+                  <div class="a-bar" id="p-bar-wrap"><span id="p-bar"></span></div>
+                  <div class="a-panel" id="p-panel" hidden aria-live="polite">
+                    <p class="a-ptitle" id="p-ptitle"></p>
+                    <div class="a-ptext" id="p-ptext"></div>
+                    <div class="a-pbtns">
+                      <button class="a-ver" id="p-ver" type="button" data-t="a_show"></button>
+                      <button class="a-cont" id="p-cont" type="button" data-t="a_continue"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="a-yn" id="p-yn">
+                  <button class="a-si" id="p-si" type="button" data-t="a_yes"></button>
+                  <button class="a-no" id="p-no" type="button" data-t="a_no"></button>
+                </div>
+                <p class="a-stats" id="p-stats"></p>
+                <div class="a-nav" aria-hidden="true">
+                  <span data-t="a_lib"></span>
+                  <span class="on" data-t="a_title"></span>
+                  <span data-t="a_packs"></span>
+                  <span data-t="a_progress"></span>
+                </div>
+              </div>
+            </div>
+            <p class="demo-note" data-t="demo_note"></p>
+          </div>
+        </div>
+      </section>
+
+      <div class="trust">
+        <ul>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 13a10 10 0 0 1 5.2-2.8M19 13a10 10 0 0 0-2.4-1.7M2 8.8a15 15 0 0 1 4.2-2.6M22 8.8A15 15 0 0 0 10.7 5M12 20h.01"
+              /></svg
+            ><span data-t="trust_1"></span>
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg
+            ><span data-t="trust_2"></span>
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="5" y="11" width="14" height="10" rx="2" />
+              <path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg
+            ><span data-t="trust_3"></span>
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="M9 12l2 2 4-4" /></svg
+            ><span data-t="trust_4"></span>
+          </li>
+        </ul>
+      </div>
+
+      <section id="how">
+        <div class="wrap">
+          <div class="head">
+            <span class="kicker" data-t="how_kicker"></span>
+            <h2 data-h="how_title"></h2>
+            <p data-t="how_text"></p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <span class="step-n">1</span>
+              <h3 data-t="s1_t"></h3>
+              <p data-t="s1_p"></p>
+            </div>
+            <div class="step">
+              <span class="step-n">2</span>
+              <h3 data-t="s2_t"></h3>
+              <p data-t="s2_p"></p>
+            </div>
+            <div class="step">
+              <span class="step-n">3</span>
+              <h3 data-t="s3_t"></h3>
+              <p data-t="s3_p"></p>
+            </div>
+            <div class="step">
+              <span class="step-n">4</span>
+              <h3 data-t="s4_t"></h3>
+              <p data-t="s4_p"></p>
+            </div>
+          </div>
+          <div class="memory">
+            <div class="box">
+              <h3 data-t="freq_t"></h3>
+              <p data-t="freq_p"></p>
+              <div class="bars">
+                <div class="bar-row">
+                  <span data-t="st_forgot"></span>
+                  <div class="bar-track"><span style="width: 100%; background: var(--rojo)"></span></div>
+                </div>
+                <div class="bar-row">
+                  <span data-t="st_new"></span>
+                  <div class="bar-track"><span style="width: 60%; background: var(--apagado)"></span></div>
+                </div>
+                <div class="bar-row">
+                  <span data-t="st_known"></span>
+                  <div class="bar-track"><span style="width: 20%; background: var(--verde)"></span></div>
+                </div>
+                <div class="bar-row">
+                  <span data-t="st_mastered"></span>
+                  <div class="bar-track"><span style="width: 8%; background: var(--dorado)"></span></div>
+                </div>
+              </div>
+              <small data-t="freq_note"></small>
+            </div>
+            <div class="box">
+              <h3 data-t="sess_t"></h3>
+              <p data-t="sess_p"></p>
+              <div class="chips">
+                <span>5 min</span>
+                <span class="on">10 min</span>
+                <span>15 min</span>
+                <span data-t="sess_free"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap split">
+          <div class="head">
+            <span class="kicker" data-t="pron_kicker"></span>
+            <h2 data-t="pron_title"></h2>
+            <p data-t="pron_text"></p>
+          </div>
+          <div class="list" data-only="en">
+            <div class="row" style="--m: #be963c">
+              <strong>la casa</strong><em>[lah KAH-sah]</em><small>the house</small>
+            </div>
+            <div class="row" style="--m: #2d7855">
+              <strong>gracias</strong><em>[GRAH-see-ahs]</em><small>thank you</small>
+            </div>
+            <div class="row" style="--m: #96373c">
+              <strong>¿dónde?</strong><em>[DOHN-deh]</em><small>where?</small>
+            </div>
+            <div class="row" style="--m: #505360">
+              <strong>mañana</strong><em>[mah-NYAH-nah]</em><small>tomorrow</small>
+            </div>
+          </div>
+          <div class="list" data-only="es" hidden>
+            <div class="row" style="--m: #be963c">
+              <strong>house</strong><em>[jáus]</em><small>la casa</small>
+            </div>
+            <div class="row" style="--m: #2d7855">
+              <strong>thank you</strong><em>[zénkiu]</em><small>gracias</small>
+            </div>
+            <div class="row" style="--m: #96373c">
+              <strong>water</strong><em>[uórer]</em><small>el agua</small>
+            </div>
+            <div class="row" style="--m: #505360">
+              <strong>tomorrow</strong><em>[tumórou]</em><small>mañana</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="wrap">
+          <div class="head">
+            <span class="kicker" data-t="feat_kicker"></span>
+            <h2 data-t="feat_title"></h2>
+            <p data-t="feat_text"></p>
+          </div>
+          <div class="features">
+            <div class="feature" style="--m: #375f91">
+              <h3 data-t="f1_t"></h3>
+              <p data-t="f1_p"></p>
+            </div>
+            <div class="feature" style="--m: #be963c">
+              <h3 data-t="f2_t"></h3>
+              <p data-t="f2_p"></p>
+            </div>
+            <div class="feature" style="--m: #2d7855">
+              <h3 data-t="f3_t"></h3>
+              <p data-t="f3_p"></p>
+            </div>
+            <div class="feature" style="--m: #375f91">
+              <h3 data-t="f4_t"></h3>
+              <p data-t="f4_p"></p>
+            </div>
+            <div class="feature" style="--m: #2d7855">
+              <h3 data-t="f5_t"></h3>
+              <p data-t="f5_p"></p>
+            </div>
+            <div class="feature" style="--m: #375f91">
+              <h3 data-t="f6_t"></h3>
+              <p data-t="f6_p"></p>
+            </div>
+            <div class="feature" style="--m: #375f91">
+              <h3 data-t="f7_t"></h3>
+              <p data-t="f7_p"></p>
+            </div>
+            <div class="feature" style="--m: #be963c">
+              <h3 data-t="f8_t"></h3>
+              <p data-t="f8_p"></p>
+            </div>
+            <div class="feature" style="--m: #505360">
+              <h3 data-t="f9_t"></h3>
+              <p data-t="f9_p"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="packs">
+        <div class="wrap">
+          <div class="head">
+            <span class="kicker" data-t="packs_kicker"></span>
+            <h2 data-t="packs_title"></h2>
+            <p data-t="packs_text"></p>
+          </div>
+          <div class="packs" data-only="en">
+            <div class="pack">
+              <div class="pack-head">
+                <h3>Spanish</h3>
+                <span>~127 words</span>
+              </div>
+              <ol>
+                <li><b>1</b>Greetings &amp; courtesy</li>
+                <li><b>2</b>Numbers, days &amp; time</li>
+                <li><b>3</b>Home &amp; food</li>
+                <li><b>4</b>Essential verbs</li>
+                <li><b>5</b>Useful phrases</li>
+              </ol>
+            </div>
+            <div class="pack">
+              <div class="pack-head">
+                <h3>Latin</h3>
+                <span>in Spanish</span>
+              </div>
+              <ol>
+                <li><b>1</b>How to read it</li>
+                <li><b>2</b>Philosophy vocabulary</li>
+                <li><b>3</b>Famous phrases</li>
+                <li><b>4</b>Verbs</li>
+                <li><b>5</b>Declensions &amp; cases</li>
+              </ol>
+            </div>
+            <div class="pack">
+              <div class="pack-head">
+                <h3>Ancient Greek</h3>
+                <span>in Spanish</span>
+              </div>
+              <ol>
+                <li><b>1</b>The alphabet</li>
+                <li><b>2</b>Philosophy vocabulary</li>
+                <li><b>3</b>Famous phrases</li>
+                <li><b>4</b>Verbs &amp; basic words</li>
+              </ol>
+            </div>
+          </div>
+          <div class="packs" data-only="es" hidden>
+            <div class="pack">
+              <div class="pack-head">
+                <h3>Inglés</h3>
+                <span>~130 palabras</span>
+              </div>
+              <ol>
+                <li><b>1</b>Saludos y cortesía</li>
+                <li><b>2</b>Números, días y tiempo</li>
+                <li><b>3</b>La casa y la comida</li>
+                <li><b>4</b>Verbos esenciales</li>
+                <li><b>5</b>Frases útiles</li>
+              </ol>
+            </div>
+            <div class="pack">
+              <div class="pack-head">
+                <h3>Latín</h3>
+                <span>idioma clásico</span>
+              </div>
+              <ol>
+                <li><b>1</b>Cómo se lee</li>
+                <li><b>2</b>Vocabulario filosófico</li>
+                <li><b>3</b>Frases célebres</li>
+                <li><b>4</b>Verbos</li>
+                <li><b>5</b>Declinaciones y casos</li>
+              </ol>
+            </div>
+            <div class="pack">
+              <div class="pack-head">
+                <h3>Griego antiguo</h3>
+                <span>idioma clásico</span>
+              </div>
+              <ol>
+                <li><b>1</b>Alfabeto</li>
+                <li><b>2</b>Vocabulario filosófico</li>
+                <li><b>3</b>Frases célebres</li>
+                <li><b>4</b>Verbos y palabras básicas</li>
+              </ol>
+            </div>
+          </div>
+          <p class="pack-note" data-t="packs_note"></p>
+        </div>
+      </section>
+
+      <section id="course">
+        <div class="wrap">
+          <div class="head">
+            <span class="kicker" data-t="course_kicker"></span>
+            <h2 data-h="course_title"></h2>
+            <p data-t="course_text"></p>
+          </div>
+          <div class="course-wrap">
+            <div class="cover" aria-hidden="true">
+              <span class="cover-top" data-t="cover_top"></span>
+              <div>
+                <h3 data-h="cover_title"></h3>
+                <div class="cover-line"></div>
+                <p data-t="cover_sub"></p>
+              </div>
+              <div class="cover-foot"><span>ChavaleteWorld</span><span data-t="cover_foot"></span></div>
+            </div>
+            <div>
+              <div class="facts">
+                <span>PDF</span>
+                <span data-t="fact_lessons"></span>
+                <span data-t="fact_pages"></span>
+                <span data-t="fact_app"></span>
+              </div>
+              <ol class="lessons" data-only="en">
+                <li>
+                  <b>1</b><span>Greetings<em>tú vs usted</em></span>
+                </li>
+                <li>
+                  <b>2</b><span>Numbers &amp; time<em>counting, days, telling the time</em></span>
+                </li>
+                <li>
+                  <b>3</b><span>Home &amp; food<em>gender, articles, hay, me gusta</em></span>
+                </li>
+                <li>
+                  <b>4</b><span>Verbs<em>present tense, ser vs estar</em></span>
+                </li>
+                <li>
+                  <b>5</b><span>Useful phrases<em>quisiera, poder</em></span>
+                </li>
+              </ol>
+              <ol class="lessons" data-only="es" hidden>
+                <li>
+                  <b>1</b><span>Saludos<em>el verbo to be</em></span>
+                </li>
+                <li>
+                  <b>2</b><span>Números, días y hora<em>contar y decir la hora</em></span>
+                </li>
+                <li>
+                  <b>3</b><span>Casa y comida<em>a/an/the, plurales, there is/are, I like</em></span>
+                </li>
+                <li>
+                  <b>4</b><span>Verbos<em>presente simple</em></span>
+                </li>
+                <li>
+                  <b>5</b><span>Frases útiles<em>would like, can</em></span>
+                </li>
+              </ol>
+              <div class="inside">
+                <h3 data-t="inside_t"></h3>
+                <ul>
+                  <li data-t="in_1"></li>
+                  <li data-t="in_2"></li>
+                  <li data-t="in_3"></li>
+                  <li data-t="in_4"></li>
+                  <li data-t="in_5"></li>
+                  <li data-t="in_6"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="buy">
+        <div class="wrap">
+          <div class="head">
+            <span class="kicker" data-t="buy_kicker"></span>
+            <h2 data-t="buy_title"></h2>
+          </div>
+          <div class="plans">
+            <div class="plan">
+              <h3 data-t="plan_app_t"></h3>
+              <p class="sub" data-t="plan_app_sub"></p>
+              <p class="price" data-t="plan_app_price"></p>
+              <p class="price-note" data-t="plan_app_note"></p>
+              <span class="btn btn-soon" data-t="meta_play"></span>
+              <ul>
+                <li data-t="pa_1"></li>
+                <li data-t="pa_2"></li>
+                <li data-t="pa_3"></li>
+              </ul>
+            </div>
+            <div class="plan main">
+              <span class="plan-tag" data-t="plan_best"></span>
+              <h3 data-t="plan_course_t"></h3>
+              <p class="sub" data-t="plan_course_sub"></p>
+              <p class="price" data-t="plan_course_price"></p>
+              <p class="price-note" data-t="plan_app_note"></p>
+              <a class="btn btn-azul" href="[PAYMENT LINK]" data-t="plan_buy"></a>
+              <p class="secure">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="5" y="11" width="14" height="10" rx="2" />
+                  <path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg
+                ><span data-t="secure"></span>
+              </p>
+              <ul>
+                <li data-t="pc_1"></li>
+                <li data-t="pc_2"></li>
+                <li data-t="pc_3"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="wrap">
+          <div class="head">
+            <h2 data-t="faq_title"></h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary data-t="q1"></summary>
+              <p data-t="a1"></p>
+            </details>
+            <details>
+              <summary data-t="q2"></summary>
+              <p data-t="a2"></p>
+            </details>
+            <details>
+              <summary data-t="q3"></summary>
+              <p data-t="a3"></p>
+            </details>
+            <details>
+              <summary data-t="q4"></summary>
+              <p data-t="a4"></p>
+            </details>
+            <details>
+              <summary data-t="q5"></summary>
+              <p data-t="a5"></p>
+            </details>
+            <details>
+              <summary data-t="q6"></summary>
+              <p data-t="a6"></p>
+            </details>
+            <details>
+              <summary data-t="q7"></summary>
+              <p data-t="a7"></p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <a class="brand" href="#top" aria-label="ChavaleteWorld">
+          <img src="img/logo.svg" alt="" width="40" height="40" />
+          <span>Chavalete<b>World</b></span>
+        </a>
+        <div class="foot-links">
+          <a href="privacy.html" data-t="privacy"></a>
+          <span data-t="contact"></span>
+        </div>
+        <span data-t="copyright"></span>
+      </div>
+    </footer>
+
+    <script src="js/textos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
