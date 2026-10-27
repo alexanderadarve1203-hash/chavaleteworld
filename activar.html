@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Activate the app | ChavaleteWorld</title>
+    <meta name="description" content="Activate the ChavaleteWords app that comes with your ChavaleteWorld course." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0F1115" />
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Lora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="index.html" aria-label="ChavaleteWorld">
+          <img src="img/logo.svg" alt="" width="40" height="40" />
+          <span>Chavalete<b>World</b></span>
+        </a>
+        <div class="nav-right">
+          <a class="back" href="index.html" data-t="back"></a>
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="doc">
+      <span class="kicker" data-t="kicker"></span>
+      <h1 data-t="title"></h1>
+      <p class="date" data-t="intro"></p>
+
+      <ol class="act-steps">
+        <li>
+          <b>1</b>
+          <div>
+            <h2 data-t="s1_t"></h2>
+            <p data-t="s1_p"></p>
+            <a class="btn btn-azul" id="apk" href="#" hidden data-t="s1_btn"></a>
+            <p class="act-help" data-t="s1_help"></p>
+          </div>
+        </li>
+        <li>
+          <b>2</b>
+          <div>
+            <h2 data-t="s2_t"></h2>
+            <p data-t="s2_p"></p>
+          </div>
+        </li>
+        <li>
+          <b>3</b>
+          <div>
+            <h2 data-t="s3_t"></h2>
+            <p data-t="s3_p"></p>
+          </div>
+        </li>
+      </ol>
+
+      <form class="act-form" id="form" novalidate>
+        <div class="field">
+          <label for="correo" data-t="f_email"></label>
+          <input id="correo" name="correo" type="email" autocomplete="email" required maxlength="200" />
+        </div>
+        <div class="field">
+          <label for="transaccion" data-t="f_tx"></label>
+          <input
+            id="transaccion"
+            name="transaccion"
+            type="text"
+            autocomplete="off"
+            autocapitalize="characters"
+            spellcheck="false"
+            required
+            maxlength="40"
+            placeholder="HP0000000000"
+          />
+          <small data-t="f_tx_help"></small>
+        </div>
+        <div class="field">
+          <label for="celular" data-t="f_phone"></label>
+          <input
+            id="celular"
+            name="celular"
+            type="text"
+            autocomplete="off"
+            autocapitalize="characters"
+            spellcheck="false"
+            required
+            maxlength="12"
+            placeholder="XXXX-XXXX"
+          />
+          <small data-t="f_phone_help"></small>
+        </div>
+        <button class="btn btn-azul" id="enviar" type="submit" data-t="f_send"></button>
+        <p class="act-msg" id="msg" role="alert" hidden></p>
+      </form>
+
+      <div class="act-result" id="resultado" hidden aria-live="polite">
+        <p data-t="r_title"></p>
+        <strong id="codigo"></strong>
+        <button class="btn btn-gris" id="copiar" type="button" data-t="r_copy"></button>
+        <small data-t="r_note"></small>
+      </div>
+
+      <section>
+        <h2 data-t="faq_t"></h2>
+        <div class="faq-list">
+          <details>
+            <summary data-t="q1"></summary>
+            <p data-t="a1"></p>
+          </details>
+          <details>
+            <summary data-t="q2"></summary>
+            <p data-t="a2"></p>
+          </details>
+          <details>
+            <summary data-t="q3"></summary>
+            <p data-t="a3"></p>
+          </details>
+          <details>
+            <summary data-t="q4"></summary>
+            <p data-t="a4"></p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <a class="brand" href="index.html" aria-label="ChavaleteWorld">
+          <img src="img/logo.svg" alt="" width="40" height="40" />
+          <span>Chavalete<b>World</b></span>
+        </a>
+        <div class="foot-links">
+          <a href="privacy.html" data-t="privacy"></a>
+          <span>chavaleteworld@gmail.com</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/activar.js"></script>
+  </body>
+</html>

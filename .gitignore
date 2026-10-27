@@ -1,0 +1,7 @@
+*.md
+!README.md
+*.csv
+*.keystore
+*.py
+.wrangler/
+.dev.vars
