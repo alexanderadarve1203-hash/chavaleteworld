@@ -75,13 +75,13 @@ const demo = (() => {
   function pick(list) {
     const weights = list.map((x) => {
       const s = info(x);
-      let wgt = 3;
-      if (s.status === "forgotten") wgt = 5 + Math.min(s.forgot, 5);
-      else if (s.status === "known") wgt = 1;
-      else if (s.status === "mastered") wgt = 0.35;
-      if (s.streak === 1) wgt *= 0.65;
-      else if (s.streak === 2) wgt *= 0.4;
-      else if (s.streak >= 3) wgt *= 0.2;
+      let wgt = 4;
+      if (s.status === "forgotten") wgt = 6 + Math.min(s.forgot, 4);
+      else if (s.status === "known") wgt = 2;
+      else if (s.status === "mastered") wgt = 1.2;
+      if (s.streak === 2) wgt *= 0.8;
+      else if (s.streak >= 3) wgt *= 0.65;
+      wgt = Math.max(wgt, 0.6);
       if (x === current && list.length > 1) wgt = 0;
       return wgt;
     });
