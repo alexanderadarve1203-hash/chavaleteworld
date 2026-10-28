@@ -61,8 +61,10 @@ function responder(estado, datos) {
 
 export async function onRequestPost(context) {
   const { request, env } = context;
+  if (!env.COMPRAS) return responder(503, { ok: false, error: "no_configurado", falta: "base_de_datos" });
+  if (!env.LLAVE_ACTIVACION) return responder(503, { ok: false, error: "no_configurado", falta: "llave" });
   const llave = hexABytes(env.LLAVE_ACTIVACION);
-  if (!llave || !env.COMPRAS) return responder(503, { ok: false, error: "no_configurado" });
+  if (!llave) return responder(503, { ok: false, error: "no_configurado", falta: "llave_formato" });
 
   let cuerpo;
   try {
