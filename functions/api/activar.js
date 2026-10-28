@@ -65,7 +65,17 @@ export async function onRequestPost(context) {
   if (!env.COMPRAS) return responder(503, { ok: false, error: "no_configurado", falta: "base_de_datos" });
   if (!env.LLAVE_ACTIVACION) return responder(503, { ok: false, error: "no_configurado", falta: "llave" });
   const llave = hexABytes(env.LLAVE_ACTIVACION);
-  if (!llave) return responder(503, { ok: false, error: "no_configurado", falta: "llave_formato" });
+  if (!llave) {
+    const texto = String(env.LLAVE_ACTIVACION);
+    const tramos = (texto.match(/[0-9a-fA-F]+/g) || []).map((t) => t.length).filter((n) => n >= 8);
+    return responder(503, {
+      ok: false,
+      error: "no_configurado",
+      falta: "llave_formato",
+      largo: texto.length,
+      tramos,
+    });
+  }
 
   let cuerpo;
   try {
