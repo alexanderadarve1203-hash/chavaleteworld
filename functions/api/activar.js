@@ -30,8 +30,9 @@ function conGuiones(s) {
 }
 
 function hexABytes(hex) {
-  const limpio = String(hex || "").trim();
-  if (!/^[0-9a-fA-F]{64}$/.test(limpio)) return null;
+  const encontrada = String(hex || "").match(/(?<![0-9a-fA-F])[0-9a-fA-F]{64}(?![0-9a-fA-F])/);
+  if (!encontrada) return null;
+  const limpio = encontrada[0];
   const b = new Uint8Array(32);
   for (let i = 0; i < 32; i++) b[i] = parseInt(limpio.substr(i * 2, 2), 16);
   return b;
